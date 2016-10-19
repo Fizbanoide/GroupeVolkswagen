@@ -19,5 +19,5 @@ public class Group {
         this.volkswagen.remove(subComp);
     }
 
-    
+
 }
