@@ -29,6 +29,12 @@ public class Init {
         Car seatIbiza = new Car("Red", "Ibiza", 4, 174);
         Car skodaFabia3 = new Car("Orange", "Fabia 3", 4, 190);
         Car bentleyBrooklands = new Car("Silver", "Brooklands", 4, 296);
+        Car bugattiVeyron = new Car("Black", "Veyron", 4, 415);
+        Car lamborghiniAventador = new Car("Black", "Aventador", 4, 351);
+        Car porschePanamera = new Car("Red", "Panamera", 4, 259);
+        Motorcycle ducati1000Monster = new Motorcycle("Black", "1000 Monster", 2, 230);
+        Truck scaniaSerieR = new Truck("Black", "Serie R", 4, 216);
+        Truck manTGS = new Truck("Yellow", "TGS", 8, 189);
         
 
 
