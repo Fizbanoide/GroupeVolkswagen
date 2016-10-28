@@ -4,14 +4,10 @@ package com.example.iem.groupevolkswagen;
  * Created by iem on 19/10/2016.
  */
 public class Init {
-    private static Init ourInstance = new Init();
-
-    public static Init getInstance() {
-        return ourInstance;
-    }
 
     private Init() {
         Group gVolkswagen = new Group();
+
         SubComp volkswagen = new SubComp("Volkswagen", "Germany", 202, 592586, 1937);
         SubComp audi = new SubComp("Audi", "Germany", 49, 59513, 1964);
         SubComp seat = new SubComp("Seat", "Spain", 7, 14000, 1986);
@@ -35,9 +31,37 @@ public class Init {
         Motorcycle ducati1000Monster = new Motorcycle("Black", "1000 Monster", 2, 230);
         Truck scaniaSerieR = new Truck("Black", "Serie R", 4, 216);
         Truck manTGS = new Truck("Yellow", "TGS", 8, 189);
-        
 
+        volkswagen.addVehicle(vkGolf);
+        audi.addVehicle(audiR8);
+        seat.addVehicle(seatIbiza);
+        skoda.addVehicle(skodaFabia3);
+        bentley.addVehicle(bentleyBrooklands);
+        bugatti.addVehicle(bugattiVeyron);
+        lamborghini.addVehicle(lamborghiniAventador);
+        porsche.addVehicle(porschePanamera);
+        ducati.addVehicle(ducati1000Monster);
+        scania.addVehicle(scaniaSerieR);
+        man.addVehicle(manTGS);
 
-        gVolkswagen.addSubComp();
+        gVolkswagen.addSubComp(volkswagen);
+        gVolkswagen.addSubComp(audi);
+        gVolkswagen.addSubComp(seat);
+        gVolkswagen.addSubComp(skoda);
+        gVolkswagen.addSubComp(bentley);
+        gVolkswagen.addSubComp(bugatti);
+        gVolkswagen.addSubComp(lamborghini);
+        gVolkswagen.addSubComp(porsche);
+        gVolkswagen.addSubComp(ducati);
+        gVolkswagen.addSubComp(scania);
+        gVolkswagen.addSubComp(man);
+    }
+
+    private static class Holder{
+        public static Init instance = new Init();
+    }
+
+    public Init getInstance() {
+        return Holder.instance;
     }
 }
